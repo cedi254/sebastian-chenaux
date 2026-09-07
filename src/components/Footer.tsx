@@ -51,7 +51,10 @@ export function Footer() {
           title="Website built by Youpscaling"
         >
           <span>Created with precision by</span>
-          <strong>Youpscaling ↗</strong>
+          <strong className="youp-brand">
+            <span className="youp-gradient">Youpscaling</span>
+            <span className="youp-arrow">↗</span>
+          </strong>
         </a>
       </div>
       <div className="footer-links">
