@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   ),
   title: "Sebastian Chenaux | Personal Trainer Zürich",
   description:
-    "Dein Training. Dein Fortschritt. Persönliches Coaching mit Sebastian Chenaux: Kraft, Ausdauer und Functional Training bei MCS Training in Zürich.",
+    "Dein Training. Dein Fortschritt. Persönliches Coaching mit Sebastian Chenaux: Kraft, Ausdauer und Functional Training in Zürich.",
   openGraph: {
     title: "Sebastian Chenaux | Dein nächstes Level",
     description:

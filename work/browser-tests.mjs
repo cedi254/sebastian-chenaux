@@ -163,12 +163,11 @@ await check(
       });
   },
 );
-await check("Location tabs and verified route destinations", async () => {
-  await page.getByRole("button", { name: "Altstetten", exact: true }).click();
-  assert.match(await page.locator("address").innerText(), /Badenerstrasse 557/);
+await check("Location address and verified route destination", async () => {
+  assert.match(await page.locator("address").innerText(), /Riedtlistrasse 27/);
   assert.match(
     await page.locator(".location-links a").first().getAttribute("href"),
-    /Badenerstrasse/,
+    /Riedtlistrasse/,
   );
 });
 await check(

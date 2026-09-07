@@ -18,24 +18,26 @@ export function Location() {
         </h2>
         <div className="location-name">
           <MapPin size={20} />
-          <h3>MCS TRAINING</h3>
+          <h3>{siteConfig.location.name.toUpperCase()}</h3>
         </div>
         <p className="body-copy">{siteConfig.location.note}</p>
-        <div className="studio-switch" aria-label="MCS Standorte">
-          {siteConfig.location.studios.map((s, i) => (
-            <button
-              key={s.name}
-              aria-pressed={i === studio}
-              onClick={() => {
-                setStudio(i);
-                setMap(false);
-              }}
-              className={studio === i ? "active" : ""}
-            >
-              {s.name}
-            </button>
-          ))}
-        </div>
+        {siteConfig.location.studios.length > 1 && (
+          <div className="studio-switch" aria-label="Standorte">
+            {siteConfig.location.studios.map((s, i) => (
+              <button
+                key={s.name}
+                aria-pressed={i === studio}
+                onClick={() => {
+                  setStudio(i);
+                  setMap(false);
+                }}
+                className={studio === i ? "active" : ""}
+              >
+                {s.name}
+              </button>
+            ))}
+          </div>
+        )}
         <address>
           {current.street}
           <br />
@@ -49,14 +51,6 @@ export function Location() {
             rel="noopener noreferrer"
           >
             Route öffnen <ArrowUpRight size={17} />
-          </a>
-          <a
-            className="micro"
-            href={siteConfig.location.website}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            MCS entdecken ↗
           </a>
         </div>
       </div>
