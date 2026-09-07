@@ -255,7 +255,10 @@ h2 {
 .hero-image img {
   object-fit: cover;
   object-position: 65% 45%;
-  filter: saturate(0.5);
+  filter: contrast(1.05) saturate(0.88);
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .hero-shade {
   position: absolute;
@@ -589,7 +592,10 @@ h2 {
 .image-frame img {
   object-fit: cover;
   transition: transform 1.1s cubic-bezier(0.2, 0.65, 0.3, 1);
-  filter: saturate(0.42);
+  filter: contrast(1.04) saturate(0.85);
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .image-frame:hover img {
   transform: scale(1.035);
@@ -649,8 +655,8 @@ h2 {
   margin-top: 10px;
 }
 .training-experience {
-  height: 175svh;
-  min-height: 1150px;
+  height: 300svh;
+  min-height: 1800px;
   position: relative;
   --scene-progress: 0;
   background: #101010;
@@ -665,7 +671,9 @@ h2 {
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(ellipse at 39% 45%, #2b2b2b55, transparent 63%), #101010;
+    radial-gradient(ellipse 65% 55% at 42% 48%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 70%),
+    url('/images/training-bg.webp') center/cover no-repeat,
+    #0c0c0c;
 }
 .training-topline {
   display: flex;
@@ -678,8 +686,8 @@ h2 {
 .training-layout {
   flex: 1;
   display: grid;
-  grid-template-columns: 105px minmax(0, 1fr) minmax(220px, 27%) 52px;
-  gap: 20px;
+  grid-template-columns: 120px minmax(0, 1fr) minmax(240px, 32%);
+  gap: 32px;
   align-items: center;
 }
 .training-nav {
@@ -760,7 +768,7 @@ h2 {
   top: 35%;
   width: 90%;
   height: 30%;
-  border: 1px solid #ffffff20;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   transform: rotate(-26deg);
   pointer-events: none;
@@ -768,17 +776,29 @@ h2 {
 .orbit:after {
   content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background: #dfdfdc;
-  box-shadow: 0 0 12px #fff;
-  top: 22%;
-  left: 3%;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  box-shadow: 0 0 14px 2px #ffffff;
+  top: auto;
+  bottom: 8%;
+  left: 12%;
   border-radius: 50%;
 }
 .orbit-two {
   transform: rotate(27deg);
-  opacity: 0.3;
+  opacity: 0.45;
+}
+.orbit-two:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  box-shadow: 0 0 12px 2px #ffffff;
+  top: 10%;
+  right: 12%;
+  border-radius: 50%;
 }
 .weight-label {
   position: absolute;
@@ -891,11 +911,25 @@ h2 {
   position: relative;
 }
 .goals-section {
-  padding-top: 95px;
-  padding-bottom: 70px;
+  padding-top: 105px;
+  padding-bottom: 85px;
   background:
-    radial-gradient(ellipse at 0 0, #33333333, transparent 65%), #090909;
+    url('/images/goals-bg.webp') top center/cover no-repeat,
+    radial-gradient(ellipse at 15% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+    #080808;
   position: relative;
+  overflow: hidden;
+}
+.goals-section:after {
+  content: "";
+  position: absolute;
+  bottom: 22%;
+  left: 6%;
+  width: 380px;
+  height: 140px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(25px);
 }
 .section-heading {
   display: flex;
@@ -903,6 +937,8 @@ h2 {
   justify-content: space-between;
   gap: 35px;
   margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
 }
 .section-heading .eyebrow {
   margin-bottom: 18px;
@@ -916,16 +952,22 @@ h2 {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 10px;
+  position: relative;
+  z-index: 1;
 }
 .goal-panel {
   height: 154px;
-  border: 1px solid #ffffff1c;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   position: relative;
+  border-radius: 4px;
   transition:
     border 0.3s,
     background 0.3s,
@@ -945,15 +987,16 @@ h2 {
   color: #555;
 }
 .goal-panel:hover {
-  border-color: #888;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(28, 28, 28, 0.75);
   transform: translateY(-3px);
 }
 .goal-panel.active {
-  border-color: #e1dfd6;
+  border-color: #ffffff;
   box-shadow:
-    0 0 15px #ede6c62b,
-    inset 0 0 15px #ffffff09;
-  background: #ffffff04;
+    0 0 22px rgba(255, 255, 255, 0.22),
+    inset 0 0 16px rgba(255, 255, 255, 0.06);
+  background: rgba(26, 26, 26, 0.85);
 }
 .goal-panel.active .goal-number {
   color: #bbb;
@@ -1594,8 +1637,8 @@ address {
     margin: 25px 0;
   }
   .training-experience {
-    height: 155svh;
-    min-height: 1150px;
+    height: 240svh;
+    min-height: 1400px;
   }
   .training-sticky {
     min-height: 790px;

@@ -57,6 +57,27 @@ export function TrainingExperience() {
       query.removeEventListener("change", update);
     };
   }, []);
+  const scrollToMode = (targetIndex: number) => {
+    if (!root.current) {
+      setMode(targetIndex);
+      return;
+    }
+    const rect = root.current.getBoundingClientRect();
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const sectionTop = rect.top + scrollTop;
+    const scrollableDistance = root.current.offsetHeight - window.innerHeight;
+
+    const count = trainingModes.length;
+    const targetFraction = (targetIndex + 0.5) / count;
+    const targetY = sectionTop + targetFraction * scrollableDistance;
+
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
+    setMode(targetIndex);
+  };
+
   useEffect(() => {
     if (!root.current || !ready) return;
     let disposed = false;
@@ -80,6 +101,13 @@ export function TrainingExperience() {
               self.progress.toFixed(3),
             );
             window.dispatchEvent(new Event("training-progress"));
+
+            const count = trainingModes.length;
+            const newMode = Math.min(
+              count - 1,
+              Math.max(0, Math.floor(self.progress * count)),
+            );
+            setMode((prev) => (prev !== newMode ? newMode : prev));
           },
         });
         cleanup = () => trigger.kill();
@@ -116,7 +144,7 @@ export function TrainingExperience() {
             {trainingModes.map((m, i) => (
               <button
                 key={m.name}
-                onClick={() => setMode(i)}
+                onClick={() => scrollToMode(i)}
                 aria-pressed={mode === i}
                 className={mode === i ? "active" : ""}
               >
@@ -131,42 +159,25 @@ export function TrainingExperience() {
           </div>
           <div
             className="training-visual"
-            aria-label={
-              mode === 0
-                ? "Interaktive 3D-Hantel, die sich beim Scrollen dreht"
-                : data.name
-            }
+            aria-label="Interaktive 3D-Hantel, die sich beim Scrollen dreht"
           >
-            {mode === 0 ? (
-              <>
-                <div className="orbit orbit-one" />
-                <div className="orbit orbit-two" />
-                <div className="dumbbell-stage">
-                  {ready && webgl ? (
-                    <SceneBoundary fallback={fallback}>
-                      <Scene
-                        progress={progress}
-                        reduced={reduced}
-                        active={active}
-                        onFailure={() => setWebgl(false)}
-                      />
-                    </SceneBoundary>
-                  ) : (
-                    fallback
-                  )}
-                </div>
-                <span className="weight-label">20 KG / PURE COMMITMENT</span>
-              </>
-            ) : (
-              <div className="mode-photo" key={mode}>
-                <Image
-                  src={`/images/${data.image}.webp`}
-                  alt={`Sebastian beim ${data.name === "Ausdauer" ? "Training am Kabelzug" : "Vorbereiten des funktionellen Trainings"}`}
-                  fill
-                  sizes="(max-width: 700px) 90vw, 45vw"
-                />
-              </div>
-            )}
+            <div className="orbit orbit-one" />
+            <div className="orbit orbit-two" />
+            <div className="dumbbell-stage">
+              {ready && webgl ? (
+                <SceneBoundary fallback={fallback}>
+                  <Scene
+                    progress={progress}
+                    reduced={reduced}
+                    active={active}
+                    onFailure={() => setWebgl(false)}
+                  />
+                </SceneBoundary>
+              ) : (
+                fallback
+              )}
+            </div>
+            <span className="weight-label">20 KG / PURE COMMITMENT</span>
           </div>
           <div className="training-copy" key={data.name}>
             <p className="eyebrow">0{mode + 1}</p>
@@ -177,34 +188,9 @@ export function TrainingExperience() {
               Dein Ziel entdecken <span>↗</span>
             </a>
           </div>
-          <div className="training-thumbs">
-            {trainingModes.map((m, i) => (
-              <button
-                key={m.name}
-                aria-label={`${m.name} anzeigen`}
-                aria-pressed={mode === i}
-                className={mode === i ? "active" : ""}
-                onClick={() => setMode(i)}
-              >
-                <Image
-                  unoptimized
-                  width={52}
-                  height={66}
-                  src={
-                    i === 0
-                      ? "/images/dumbbell.webp"
-                      : `/images/${m.image}-640.webp`
-                  }
-                  alt=""
-                />
-              </button>
-            ))}
-          </div>
         </div>
         <div className="training-bottom">
-          <span className="micro">
-            {mode === 0 ? "SCROLL TO ROTATE ↕" : "DEIN TRAINING. DEIN TEMPO."}
-          </span>
+          <span className="micro">SCROLL TO ROTATE ↕</span>
           <div className="scene-progress">
             <i />
           </div>

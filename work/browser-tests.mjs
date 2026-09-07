@@ -98,17 +98,20 @@ await check(
     await page.keyboard.press("Escape");
   },
 );
-await check("All training modes render and return to 3D", async () => {
+await check("All training modes render with persistent 3D dumbbell", async () => {
   await page.locator(".training-nav button").nth(1).click();
+  await page.waitForTimeout(600);
   assert.equal(await page.locator(".training-copy h2").innerText(), "AUSDAUER");
-  assert.equal(await page.locator(".mode-photo img").count(), 1);
+  assert.equal(await page.locator(".dumbbell-canvas canvas").count(), 1);
   await page.locator(".training-nav button").nth(2).click();
+  await page.waitForTimeout(600);
   assert.equal(
     await page.locator(".training-copy h2").innerText(),
     "FUNCTIONAL",
   );
+  assert.equal(await page.locator(".dumbbell-canvas canvas").count(), 1);
   await page.locator(".training-nav button").nth(0).click();
-  await page.waitForTimeout(1500);
+  await page.waitForTimeout(600);
   assert.equal(await page.locator(".dumbbell-canvas canvas").count(), 1);
 });
 await check(
