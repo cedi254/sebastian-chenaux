@@ -1,0 +1,2 @@
+import sharp from 'sharp';
+const {data,info}=await sharp('public/images/monogram.webp').ensureAlpha().raw().toBuffer({resolveWithObject:true});for(let i=0;i<data.length;i+=4){data[i+3]=255-Math.round((data[i]+data[i+1]+data[i+2])/3);data[i]=data[i+1]=data[i+2]=0;}await sharp(data,{raw:info}).webp({lossless:true}).toFile('work/monogram.webp');await (await import('node:fs/promises')).copyFile('work/monogram.webp','public/images/monogram.webp');

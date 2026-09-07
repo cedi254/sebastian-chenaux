@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sebastian Chenaux — Personal Training
 
-## Getting Started
+Cinematic German personal training website. Built with Next.js App Router, TypeScript, Tailwind, GSAP ScrollTrigger, Three.js, React Three Fiber and Drei.
 
-First, run the development server:
+## Local development
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production export: `npm run build` creates `out/`. Use any static HTTP host. Images are pre-optimised WebP with a responsive custom Next image loader; fonts are local. The GLB and 3D code load near the training section. Rendering happens on demand, not in a permanent animation loop.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Edit content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`src/lib/config.ts` contains packages, placeholder prices, goals, training modes, MCS locations and contact settings. Keep `booking.preview: true` while contact details are placeholders. To enable an actual email handoff, set `contact.email` and `booking.preview: false`. The visitor reviews and sends the prepared enquiry in their own email application; the website does not claim email delivery. A valid international WhatsApp number enables the optional WhatsApp handoff. No form data is stored or sent in preview mode.
 
-## Learn More
+The two MCS addresses were checked against https://www.mcs-training.ch/ on 7 September 2026. They are MCS locations; Sebastian's exact meeting point is arranged personally. MCS is not presented as his business.
 
-To learn more about Next.js, take a look at the following resources:
+## Quality checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run lint
+npx tsc --noEmit
+node --experimental-strip-types --test work/inquiry.test.mjs
+node work/browser-tests.mjs
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Browser tests require Playwright browsers (`npx playwright install chromium webkit`) and a running local server. They use installed Chrome and Playwright WebKit. Set TEST_URL to test another local origin. WebKit coverage is not a claim of testing the Safari application or a physical iPhone.
 
-## Deploy on Vercel
+Tested: responsive layouts at 1440, 820, 390 and 320px; six goals; three training modes; selection persistence; form validation; preview status; focus containment and Escape; anchor navigation; location links; actual canvas changes on scroll and reversal; WebGL fallback; reduced motion. `?no-webgl=1` is a deterministic fallback check.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The optional feature-detected WebMCP tool opens and stages an enquiry only. Native tool invocation requires a browser that exposes the proposed API; unsupported browsers keep all normal UI functionality.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Assets
+
+Four real user-supplied photographs and the supplied SC monogram are used. The reference mockup is not embedded. The procedural dumbbell is a 611KB GLB with bevelled rubber heads and knurled metal geometry; a small procedural rubber texture and weight markings are added at render time. Static fallback was captured from the actual scene. `work/` contains the asset generation and QA scripts; it is not part of the static export.
