@@ -39,10 +39,22 @@ export function Footer() {
           SEBASTIAN CHENAUX<small>PERSONAL TRAINER</small>
         </span>
       </a>
-      <span className="footer-credit">
-        © {new Date().getFullYear()} Sebastian Chenaux
-      </span>
-      <div>
+      <div className="footer-credits">
+        <span className="footer-credit">
+          © {new Date().getFullYear()} Sebastian Chenaux
+        </span>
+        <a
+          href="https://www.youpscaling.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="agency-badge"
+          title="Website built by Youpscaling"
+        >
+          <span>Created with precision by</span>
+          <strong>Youpscaling ↗</strong>
+        </a>
+      </div>
+      <div className="footer-links">
         {siteConfig.contact.instagram && (
           <a
             href={siteConfig.contact.instagram}
