@@ -40,12 +40,7 @@ export function Hero() {
           <a href="#training">Functional</a>
           <a href="#ziele">Athletik</a>
         </div>
-        <span className="micro">01 — THE WORK STARTS HERE</span>
       </div>
-      <a href="#sebastian" className="scroll-cue">
-        <span>Scroll to explore</span>
-        <i>↓</i>
-      </a>
     </section>
   );
 }

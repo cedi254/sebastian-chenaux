@@ -2,11 +2,6 @@ import Image from "next/image";
 export function IntroStatement() {
   return (
     <div className="intro-strip section-pad">
-      <p className="micro">
-        SPORT. FORTSCHRITT.
-        <br />
-        DEIN NÄCHSTES LEVEL.
-      </p>
       <p>
         FORTSCHRITT BEGINNT
         <br />
@@ -30,8 +25,6 @@ export function AboutSebastian() {
           fill
           sizes="(max-width: 700px) 100vw, 45vw"
         />
-        <span className="image-label">SEBASTIAN CHENAUX / COACH</span>
-        <span className="vertical-label">DISCIPLINE BUILDS FREEDOM</span>
       </div>
       <div className="about-copy reveal">
         <p className="eyebrow">01 / Dein Coach</p>
@@ -98,7 +91,6 @@ export function Philosophy() {
           Mein Ziel ist, dass du besser wirst.»
         </blockquote>
         <p className="signature">Sebastian Chenaux</p>
-        <span className="micro">FORTSCHRITT MUSS SPÜRBAR SEIN.</span>
       </div>
     </section>
   );

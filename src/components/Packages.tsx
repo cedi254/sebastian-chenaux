@@ -59,7 +59,7 @@ export function Packages() {
         ))}
       </div>
       <p className="price-note">
-        Preisplatzhalter · Dein individuelles Angebot erhältst du auf Anfrage.
+        Individuelle Angebote und Einheiten auf Anfrage.
       </p>
     </section>
   );

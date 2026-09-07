@@ -16,11 +16,6 @@ export function FinalCTA() {
       <button className="button primary" onClick={() => openBooking()}>
         Probetraining starten <span>↗</span>
       </button>
-      <div className="final-rail">
-        <span>DEIN TRAINING.</span>
-        <i />
-        <span>DEIN FORTSCHRITT.</span>
-      </div>
     </section>
   );
 }

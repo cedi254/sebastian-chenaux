@@ -137,7 +137,6 @@ export function TrainingExperience() {
       <div className="training-sticky">
         <div className="training-topline">
           <span className="eyebrow">02 / Das Training</span>
-          <span className="micro">BUILT FOR YOUR PROGRESS</span>
         </div>
         <div className="training-layout">
           <div className="training-nav" aria-label="Trainingsart">
@@ -152,17 +151,11 @@ export function TrainingExperience() {
                 {m.name}
               </button>
             ))}
-            <p className="micro">
-              BUILD A<br />
-              STRONGER YOU <span>—</span>
-            </p>
           </div>
           <div
             className="training-visual"
             aria-label="Interaktive 3D-Hantel, die sich beim Scrollen dreht"
           >
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
             <div className="dumbbell-stage">
               {ready && webgl ? (
                 <SceneBoundary fallback={fallback}>
@@ -177,7 +170,6 @@ export function TrainingExperience() {
                 fallback
               )}
             </div>
-            <span className="weight-label">20 KG / PURE COMMITMENT</span>
           </div>
           <div className="training-copy" key={data.name}>
             <p className="eyebrow">0{mode + 1}</p>
@@ -188,13 +180,6 @@ export function TrainingExperience() {
               Dein Ziel entdecken <span>↗</span>
             </a>
           </div>
-        </div>
-        <div className="training-bottom">
-          <span className="micro">SCROLL TO ROTATE ↕</span>
-          <div className="scene-progress">
-            <i />
-          </div>
-          <span className="micro">0{mode + 1} / 03</span>
         </div>
       </div>
     </section>

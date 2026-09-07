@@ -71,16 +71,10 @@ export function Location() {
           />
         )}
         <div className="location-caption">
-          <span className="micro">DEIN ORT FÜR FORTSCHRITT.</span>
           <button onClick={() => setMap(!map)}>
             {map ? "Foto anzeigen" : "Karte laden"} <span>↗</span>
           </button>
         </div>
-        {!map && (
-          <span className="map-notice">
-            Karte von Google Maps auf Wunsch laden
-          </span>
-        )}
       </div>
     </section>
   );

@@ -28,13 +28,6 @@ export function GoalSelector() {
             DEIN NÄCHSTES <span className="dim">LEVEL.</span>
           </h2>
         </div>
-        <p className="micro side-note">
-          Ziele setzen.
-          <br />
-          Dranbleiben.
-          <br />
-          Resultate sehen.
-        </p>
       </div>
       <div className="goals-grid" aria-label="Trainingsziel">
         {goals.map((item, i) => {
