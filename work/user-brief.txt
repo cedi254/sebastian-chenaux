@@ -1,0 +1,1477 @@
+# SEBASTIAN CHENAUX — PREMIUM INTERACTIVE PERSONAL TRAINER WEBSITE
+
+Build a complete, production-quality, highly interactive website for:
+
+SEBASTIAN CHENAUX
+PERSONAL TRAINER
+
+This is NOT supposed to look like a generic personal trainer template.
+
+I want a premium, cinematic, modern personal-brand website that immediately makes Sebastian feel:
+
+- athletic
+- professional
+- disciplined
+- energetic
+- approachable
+- premium
+- knowledgeable
+
+The experience should feel somewhere between:
+
+- a premium Nike / Under Armour campaign
+- a high-end sports performance brand
+- a modern Swiss design studio
+- an editorial fitness campaign
+- a cinematic interactive product website
+
+The website should feel expensive and memorable without becoming difficult to use.
+
+The visitor should understand who Sebastian is, what he offers, where he trains and how to start within roughly 20–30 seconds.
+
+DO NOT build a boring website full of paragraphs.
+
+Communicate primarily through:
+
+PHOTOGRAPHY
+TYPOGRAPHY
+MOTION
+INTERACTION
+SHORT COPY
+NUMBERS
+3D
+VISUAL HIERARCHY
+
+The supplied website concept/mockup should be treated as the main ART DIRECTION.
+
+Do not simply reproduce it as a static page.
+
+Take its visual language and turn it into a polished, responsive, interactive website.
+
+The final implementation should ideally look even better than the concept.
+
+==================================================
+01 — PROVIDED ASSETS
+==================================================
+
+I have provided:
+
+- 4 real gym/training photographs of Sebastian
+- Sebastian Chenaux SC logo / branding
+- a generated website concept/mockup showing the intended visual direction
+
+USE THE REAL PHOTOGRAPHS.
+
+Do NOT replace Sebastian with stock photography or AI-generated fitness models.
+
+The concept/mockup is a DESIGN REFERENCE, not an image to use as the website itself.
+
+The original photographs are the actual photography assets.
+
+Optimize the photographs for web:
+
+- improve sharpness subtly where useful
+- subtly improve contrast/exposure if needed
+- preserve natural skin tones
+- preserve the real photographic look
+- do not excessively denoise
+- do not make the photographs look AI-generated
+- create responsive image sizes
+- use AVIF/WebP where appropriate
+- lazy-load non-critical images
+- preserve high-resolution versions where useful
+
+The slight imperfections of real gym photography are desirable because they make the brand feel authentic.
+
+==================================================
+02 — VISUAL IDENTITY
+==================================================
+
+Use the supplied SC logo as the foundation of the visual identity.
+
+PRIMARY COLORS:
+
+Black
+Near-black
+Charcoal
+Off-white
+White
+Neutral grey
+
+Avoid stereotypical neon-green gym branding.
+
+Do not use random gradients or colorful SaaS styling.
+
+The overall visual world should be:
+
+DARK
+CINEMATIC
+EDITORIAL
+ATHLETIC
+PREMIUM
+MINIMAL
+TECHNICAL
+
+Use subtle texture/grain where appropriate.
+
+Typography should be a major part of the design.
+
+HEADLINES:
+Large, condensed, strong, athletic display typography.
+
+BODY/UI:
+Clean modern sans-serif.
+
+Use:
+- oversized typography
+- oversized numbers
+- small uppercase labels
+- generous whitespace
+- thin technical lines
+- numbered sections
+- subtle grids
+- asymmetric editorial layouts
+
+The SC monogram can occasionally appear as a subtle graphic element.
+
+Do not overuse it.
+
+==================================================
+03 — LANGUAGE
+==================================================
+
+Primary language:
+
+GERMAN
+
+Target market:
+
+SWITZERLAND
+
+Use natural Swiss-market German.
+
+Avoid corporate marketing language.
+
+Avoid huge paragraphs.
+
+Use Sebastian's supplied text as SOURCE MATERIAL rather than displaying everything verbatim.
+
+SOURCE TEXT:
+
+"Bei UEGO’S bringt Sebastian genau die Energie mit, die ein gutes Training braucht: sportlich, motivierend und mit einem starken Gespür für Teamspirit. Durch seine langjährige Erfahrung im Fussball und seine EFZ-Ausbildung im Fitnessbereich verbindet er athletisches Training mit fundiertem Know-how. Ob Kraft, Ausdauer oder funktionelle Bewegungen – bei ihm geht es darum, besser zu werden, dranzubleiben und dabei Spass am Training zu haben.
+
+Ich möchte Menschen dabei unterstützen, ihre Ziele zu erreichen, Fortschritte zu spüren und ihr nächstes Level zu entdecken."
+
+SECOND SOURCE TEXT:
+
+"Sport begleitet mich seit meiner Kindheit und ist bis heute ein zentraler Teil meines Lebens. Als Fussballer weiss ich, was es bedeutet, mit Disziplin, Leidenschaft und Teamgeist an Zielen zu arbeiten. Durch meine EFZ-Ausbildung im Fitnessbereich bringe ich fundiertes Wissen und praxisnahe Erfahrung mit ins Training. Ob Kraft, Ausdauer oder funktionelles Training – ich unterstütze dich dabei, Freude an der Bewegung zu finden, Fortschritte zu machen und dein nächstes Level zu erreichen."
+
+Do not display both full texts.
+
+Extract the strongest ideas and turn them into concise website copy.
+
+==================================================
+04 — CORE POSITIONING
+==================================================
+
+Sebastian should be positioned around:
+
+SPORT.
+FORTSCHRITT.
+DEIN NÄCHSTES LEVEL.
+
+Credibility:
+
+- EFZ-Ausbildung im Fitnessbereich
+- langjährige Fussballerfahrung
+- Krafttraining
+- Ausdauer
+- funktionelles Training
+- persönliches Coaching
+- sportliche Erfahrung
+- individuelle Betreuung
+
+The website should NOT portray him as an aggressive bodybuilding coach.
+
+The positioning is:
+
+ATHLETIC PERFORMANCE + FITNESS + PERSONAL COACHING
+
+==================================================
+05 — WEBSITE STRUCTURE
+==================================================
+
+Build approximately this experience:
+
+01 CINEMATIC HERO
+02 QUICK INTRO
+03 MEET SEBASTIAN
+04 SIGNATURE 3D DUMBBELL / TRAINING SECTION
+05 INTERACTIVE GOAL SELECTOR
+06 PHILOSOPHY
+07 PACKAGES / PRICING
+08 LOCATION
+09 BOOKING / LEAD FLOW
+10 FINAL CTA
+11 MINIMAL FOOTER
+
+IMPORTANT:
+
+These should NOT feel like 11 rectangles stacked vertically.
+
+Sections should visually transition into each other.
+
+Scrolling should feel like one continuous experience.
+
+==================================================
+06 — NAVIGATION
+==================================================
+
+Create minimal navigation.
+
+LEFT:
+SC logo
+
+CENTER / RIGHT:
+
+SEBASTIAN
+TRAINING
+ANGEBOT
+LOCATION
+
+PRIMARY CTA:
+
+PROBETRAINING →
+
+The navigation starts transparent over the hero.
+
+After scrolling it becomes a subtle dark/blurred navigation bar.
+
+Use a smooth transition.
+
+Desktop navigation should be extremely clean.
+
+Mobile should use a polished fullscreen or compact menu.
+
+Keep the primary CTA easy to reach.
+
+==================================================
+07 — CINEMATIC HERO
+==================================================
+
+The first screen must be exceptional.
+
+FULL VIEWPORT.
+
+Use the strongest supplied pull-up photograph of Sebastian as the hero.
+
+Use cinematic image treatment:
+
+- subtle dark overlay
+- controlled contrast
+- slight vignette if useful
+- very slow image scale
+- subtle parallax
+- slight depth
+- no cheesy filters
+
+Place typography over the photograph.
+
+Small label:
+
+PERSONAL TRAINER
+
+Massive headline:
+
+SEBASTIAN
+CHENAUX
+
+Supporting line:
+
+DEIN TRAINING.
+DEIN FORTSCHRITT.
+
+PRIMARY CTA:
+
+PROBETRAINING STARTEN →
+
+SECONDARY CTA:
+
+TRAINING ENTDECKEN
+
+Add a minimal animated:
+
+SCROLL ↓
+
+indicator.
+
+Optionally add small training categories along the bottom:
+
+KRAFT
+AUSDAUER
+FUNCTIONAL
+ATHLETIK
+
+The hero should feel like a sports campaign rather than a traditional homepage.
+
+==================================================
+08 — HERO INTERACTION
+==================================================
+
+As the user moves their cursor on desktop:
+
+- extremely subtle photograph parallax
+- typography may move at a different depth
+- CTA can have a subtle magnetic interaction
+
+As the user scrolls:
+
+- photograph slowly scales
+- headline moves subtly
+- hero darkens slightly
+- next content reveals through a controlled mask/clip transition
+
+Animations should be connected to scroll where appropriate.
+
+Nothing should bounce around randomly.
+
+==================================================
+09 — QUICK INTRO
+==================================================
+
+Create a short transition after the hero.
+
+Possible oversized copy:
+
+BUILT THROUGH
+DISCIPLINE.
+
+or in German:
+
+FORTSCHRITT
+BEGINNT MIT
+DISZIPLIN.
+
+Then a very short supporting line.
+
+Do NOT add a large paragraph.
+
+Use typography and movement to bridge the hero into Sebastian's story.
+
+==================================================
+10 — MEET SEBASTIAN
+==================================================
+
+Create an editorial split-layout section.
+
+Use one of Sebastian's portrait/training photographs prominently.
+
+Headline:
+
+TRAINING IST MEHR ALS
+WIEDERHOLUNGEN.
+
+Short copy:
+
+"Sport begleitet mich seit meiner Kindheit. Heute verbinde ich meine Erfahrung aus dem Fussball mit meiner EFZ-Ausbildung im Fitnessbereich, um Menschen dabei zu helfen, stärker, fitter und leistungsfähiger zu werden."
+
+Then show three credentials visually:
+
+01
+EFZ FITNESS
+
+02
+FUSSBALL
+ERFAHRUNG
+
+03
+PERSÖNLICHES
+COACHING
+
+These can animate into view as the user scrolls.
+
+The photograph should have subtle depth/parallax.
+
+Keep this section visually driven.
+
+==================================================
+11 — SIGNATURE 3D DUMBBELL EXPERIENCE
+==================================================
+
+THIS IS ONE OF THE MOST IMPORTANT SECTIONS.
+
+Create a premium interactive 3D section centered around a highly realistic black dumbbell.
+
+This should become the website's signature interaction.
+
+It should NOT feel like a random floating object.
+
+It represents Sebastian's training philosophy and strength training.
+
+Use:
+
+Three.js
+React Three Fiber
+@react-three/drei
+
+Integrate it with:
+
+GSAP ScrollTrigger
+
+==================================================
+12 — 3D VISUAL DESIGN
+==================================================
+
+Create a dark cinematic environment.
+
+Almost-black background.
+
+Subtle atmospheric lighting.
+
+Place a large photorealistic 3D dumbbell prominently in the center/left of the viewport.
+
+The dumbbell should have:
+
+- realistic black rubber/iron
+- subtle scratches
+- realistic imperfections
+- metallic knurled handle
+- physically based materials
+- realistic reflections
+- soft rim lighting
+- environmental reflections
+- subtle shadows
+- high-quality geometry
+- premium product photography appearance
+
+Think:
+
+luxury product reveal
+
+NOT:
+
+video game object.
+
+The dumbbell should feel heavy.
+
+==================================================
+13 — 3D SCROLL INTERACTION
+==================================================
+
+DO NOT simply make the dumbbell automatically spin forever.
+
+The dumbbell's movement should primarily be controlled by scroll.
+
+When the visitor scrolls DOWN:
+
+the dumbbell rotates forward.
+
+When they scroll UP:
+
+the animation naturally reverses.
+
+Create approximately one viewport or slightly more of pinned/sticky storytelling.
+
+Suggested sequence:
+
+0–20%
+
+Dumbbell slowly emerges from darkness.
+
+20–45%
+
+Dumbbell rotates toward the viewer.
+
+Small label appears:
+
+01
+
+Then huge typography:
+
+KRAFT
+
+45–70%
+
+Camera subtly approaches the dumbbell.
+
+Supporting copy appears:
+
+STÄRKER WERDEN.
+LEISTUNG AUFBAUEN.
+
+Then:
+
+"Gezieltes Krafttraining für mehr Stabilität, Leistung und einen stärkeren, gesünderen Körper."
+
+70–90%
+
+Dumbbell shifts slightly to create room for typography.
+
+Lighting subtly changes.
+
+90–100%
+
+The entire scene naturally transitions toward the next section.
+
+Everything should scrub with scroll position.
+
+No abrupt triggered animations.
+
+==================================================
+14 — 3D MOUSE INTERACTION
+==================================================
+
+On desktop:
+
+Cursor position can subtly influence:
+
+- dumbbell orientation
+- lighting
+- camera perspective
+
+VERY SUBTLY.
+
+Do NOT allow free OrbitControls.
+
+The experience should remain art-directed.
+
+The visitor should never accidentally ruin the composition.
+
+==================================================
+15 — TRAINING MODES
+==================================================
+
+Beside the 3D visual create:
+
+01 KRAFT
+02 AUSDAUER
+03 FUNCTIONAL
+
+Current category highlighted.
+
+KRAFT:
+
+3D dumbbell.
+
+Copy:
+
+STÄRKER WERDEN.
+LEISTUNG AUFBAUEN.
+
+AUSDAUER:
+
+Use supplied training photography.
+
+Copy:
+
+MEHR ENERGIE.
+MEHR BELASTBARKEIT.
+
+FUNCTIONAL:
+
+Use another supplied training photograph.
+
+Copy:
+
+STÄRKER BEWEGEN.
+BESSER FUNKTIONIEREN.
+
+Transitions between modes should feel premium.
+
+Do NOT create random 3D models for every category.
+
+The dumbbell remains the signature 3D object.
+
+==================================================
+16 — TECHNICAL 3D REQUIREMENTS
+==================================================
+
+Optimize the 3D asset.
+
+Use:
+
+- optimized GLTF/GLB
+- compressed geometry where possible
+- compressed textures
+- physically based materials
+- sensible polygon counts
+- lazy loading
+
+Use an environment/HDRI if appropriate.
+
+Use ContactShadows only if performance remains strong.
+
+Keep post-processing subtle.
+
+Do not destroy performance for visual effects.
+
+On mobile / weaker devices:
+
+- lower DPR
+- lower shadow resolution
+- simplify lighting
+- reduce geometry if necessary
+- reduce expensive post-processing
+
+If WebGL is unavailable:
+
+show a beautiful static render of the dumbbell.
+
+The website must still work perfectly.
+
+==================================================
+17 — INTERACTIVE GOAL SELECTOR
+==================================================
+
+After the 3D section create:
+
+WAS IST DEIN ZIEL?
+
+Huge headline:
+
+DEIN NÄCHSTES LEVEL.
+
+Create six interactive options:
+
+MUSKELAUFBAU
+
+FETT VERLIEREN
+
+FITNESS
+
+ATHLETIK
+
+AUSDAUER
+
+ALLGEMEIN FITTER
+
+Do NOT use generic colorful cards.
+
+Use dark premium outlined panels similar to the concept.
+
+Each should have:
+
+- minimal icon
+- label
+- hover state
+- active state
+- subtle glow/highlight
+- tactile animation
+
+==================================================
+18 — GOAL PERSONALIZATION
+==================================================
+
+When a visitor selects a goal, dynamically update the message below.
+
+Example:
+
+MUSKELAUFBAU
+
+→
+
+LET'S BUILD.
+
+"Wir kombinieren strukturiertes Krafttraining, Progression und ein Training, das zu deinem Alltag passt."
+
+ATHLETIK
+
+→
+
+PERFORM BETTER.
+
+"Mehr Explosivität, Kraft und Kontrolle für sportliche Leistung."
+
+AUSDAUER
+
+→
+
+KEEP GOING.
+
+"Wir verbessern deine Belastbarkeit und bauen Schritt für Schritt mehr Ausdauer auf."
+
+FITNESS
+
+→
+
+FEEL STRONGER.
+
+"Ein strukturiertes Training für mehr Kraft, Energie und Wohlbefinden."
+
+Include CTA:
+
+TRAINING STARTEN →
+
+The selected state should animate smoothly.
+
+==================================================
+19 — PHILOSOPHY SECTION
+==================================================
+
+Use another strong supplied image.
+
+Create a cinematic full-width section.
+
+Large headline:
+
+MEHR ALS
+NUR TRAINING.
+
+Then Sebastian's philosophy:
+
+"Mein Ziel ist nicht, dass du einfach trainierst.
+Mein Ziel ist, dass du besser wirst."
+
+Optionally include:
+
+FORTSCHRITT
+MUSS
+SPÜRBAR SEIN.
+
+Use Sebastian's name/signature treatment beneath the quote if visually appropriate.
+
+Use a subtle image mask/reveal while scrolling.
+
+This section should feel personal and emotional after the technical/interactive training sections.
+
+==================================================
+20 — PACKAGES / PRICING
+==================================================
+
+Create a premium pricing/offer section.
+
+Headline:
+
+DEIN TRAINING.
+DEIN PLAN.
+
+IMPORTANT:
+
+DO NOT INVENT REAL PRICES.
+
+Use easily editable placeholders.
+
+Possible structure:
+
+START
+
+EINZELTRAINING
+
+CHF XX
+/ TRAINING
+
+---
+
+BUILD
+
+5 TRAININGS
+
+CHF XXX
+
+---
+
+LEVEL UP
+
+10 TRAININGS
+
+CHF XXX
+
+Make BUILD or LEVEL UP visually recommended.
+
+Possible included services:
+
+- Personal Training
+- individuelle Trainingsplanung
+- Zielbesprechung
+- Fortschrittskontrolle
+- persönliche Betreuung
+
+CTA:
+
+TRAINING ANFRAGEN →
+
+Do NOT make these look like generic SaaS pricing cards.
+
+Use editorial layouts, typography, lines and subtle interaction.
+
+Store all packages/prices/features in a central data/config structure so they can be edited later without changing components.
+
+==================================================
+21 — LOCATION
+==================================================
+
+Sebastian currently works/trains at:
+
+MCS TRAINING
+
+Reference website:
+
+mcs-training.ch
+
+IMPORTANT:
+
+Sebastian does NOT own MCS Training.
+
+Communicate clearly that this is where personal training with Sebastian takes place.
+
+Create section:
+
+TRAIN WITH ME.
+
+or:
+
+HIER TRAINIEREN WIR.
+
+Then:
+
+MCS TRAINING
+
+Use a gym/training photograph.
+
+Once exact location information is verified, display:
+
+- address
+- city
+- map
+- directions CTA
+
+CTA:
+
+ROUTE ÖFFNEN →
+
+Do not invent address information.
+
+Keep location data configurable.
+
+==================================================
+22 — BOOKING EXPERIENCE
+==================================================
+
+The primary conversion goal of the entire website is:
+
+GETTING A POTENTIAL CLIENT TO CONTACT SEBASTIAN.
+
+Do not use a giant boring contact form.
+
+Create a short interactive inquiry experience.
+
+Headline:
+
+BEREIT FÜR
+DEIN NÄCHSTES LEVEL?
+
+CTA:
+
+PROBETRAINING STARTEN →
+
+When clicked, open a beautiful booking/inquiry flow.
+
+STEP 01
+
+WAS IST DEIN ZIEL?
+
+Options:
+
+Muskelaufbau
+Fett verlieren
+Fitness
+Athletik
+Ausdauer
+Allgemein fitter
+
+STEP 02
+
+WIE OFT MÖCHTEST DU TRAINIEREN?
+
+1× pro Woche
+2× pro Woche
+3×+ pro Woche
+Noch unsicher
+
+STEP 03
+
+WIE KÖNNEN WIR DICH ERREICHEN?
+
+Name
+E-Mail / Telefonnummer
+
+Optional message.
+
+Then:
+
+ANFRAGE SENDEN →
+
+Show progress:
+
+01 — 02 — 03
+
+Keep each step extremely simple.
+
+==================================================
+23 — WHATSAPP
+==================================================
+
+Prepare optional WhatsApp integration.
+
+Do not hardcode an invented number.
+
+Keep the number in site configuration.
+
+Possible CTA:
+
+ÜBER WHATSAPP ANFRAGEN →
+
+Only show when a valid number has been configured.
+
+==================================================
+24 — CTA SYSTEM
+==================================================
+
+Primary CTA throughout:
+
+PROBETRAINING STARTEN →
+
+Alternative:
+
+TRAINING STARTEN →
+
+Desktop:
+
+CTA visible in navigation.
+
+Mobile:
+
+Consider a tasteful sticky bottom CTA.
+
+Do not spam CTAs everywhere.
+
+Use them strategically after moments of high intent.
+
+==================================================
+25 — MICROINTERACTIONS
+==================================================
+
+Add premium microinteractions throughout:
+
+- magnetic CTA buttons on desktop
+- animated navigation underline
+- subtle cursor interactions
+- image scaling on hover
+- smooth image reveals
+- text mask reveals
+- number transitions
+- subtle parallax
+- scroll-linked movement
+- button arrow movement
+- category transitions
+- custom hover states
+- subtle grain/noise
+- smooth section transitions
+
+Potential custom cursor:
+
+Small minimal circle.
+
+When hovering interactive content:
+
+cursor subtly expands.
+
+When hovering image:
+
+VIEW / EXPLORE state where appropriate.
+
+DO NOT make cursor behavior annoying.
+
+==================================================
+26 — MOTION LANGUAGE
+==================================================
+
+All motion should follow one consistent philosophy:
+
+HEAVY.
+CONTROLLED.
+ATHLETIC.
+PRECISE.
+
+The dumbbell should feel heavy.
+
+Typography should move with confidence.
+
+Images should reveal smoothly.
+
+Avoid:
+
+- excessive bouncing
+- cartoon animations
+- random floating UI
+- excessive spring animations
+- overdone glowing effects
+
+Think about how a heavy object behaves physically.
+
+Translate that feeling into the motion design.
+
+==================================================
+27 — PAGE TRANSITIONS
+==================================================
+
+This is primarily a one-page experience.
+
+Scrolling between sections should feel continuous.
+
+Use:
+
+- clipping
+- masking
+- overlapping sections
+- controlled parallax
+- sticky sections
+- subtle fades
+
+instead of simply:
+
+SECTION
+SECTION
+SECTION
+SECTION
+
+The user should feel like they are moving through one visual story.
+
+==================================================
+28 — MOBILE EXPERIENCE
+==================================================
+
+MOBILE IS EXTREMELY IMPORTANT.
+
+Do NOT simply shrink the desktop layout.
+
+Design deliberate mobile compositions.
+
+Mobile should use:
+
+- strong full-screen photography
+- large but responsive typography
+- simplified animations
+- touch-friendly goal selector
+- optimized 3D
+- obvious booking CTA
+- fast loading
+- comfortable spacing
+
+For the 3D dumbbell:
+
+Keep the core scroll rotation interaction if performance allows.
+
+Reduce:
+
+- shadows
+- DPR
+- texture resolution
+- post-processing
+- mouse interaction
+
+Do not make the mobile phone struggle just to show a dumbbell.
+
+==================================================
+29 — RESPONSIVE TYPOGRAPHY
+==================================================
+
+Use clamp() and responsive design.
+
+Headlines should remain huge but never overflow.
+
+Especially test:
+
+SEBASTIAN
+CHENAUX
+
+DEIN NÄCHSTES
+LEVEL.
+
+MEHR ALS
+NUR TRAINING.
+
+DEIN TRAINING.
+DEIN PLAN.
+
+The typography is part of the visual identity.
+
+==================================================
+30 — ACCESSIBILITY
+==================================================
+
+Respect:
+
+prefers-reduced-motion
+
+When enabled:
+
+- disable major parallax
+- reduce 3D motion
+- remove unnecessary scroll effects
+- maintain all content
+- preserve usability
+
+Also ensure:
+
+- keyboard navigation
+- visible focus states
+- semantic HTML
+- sufficient contrast
+- descriptive image alt text
+- accessible form labels
+
+==================================================
+31 — TECH STACK
+==================================================
+
+Use:
+
+Next.js
+React
+TypeScript
+Tailwind CSS
+
+Animation:
+
+GSAP
+ScrollTrigger
+
+Use Framer Motion only where it genuinely improves component-level interaction.
+
+3D:
+
+Three.js
+React Three Fiber
+@react-three/drei
+
+Do not introduce unnecessary libraries.
+
+==================================================
+32 — COMPONENT ARCHITECTURE
+==================================================
+
+Build reusable components.
+
+Example architecture:
+
+Navbar
+Hero
+IntroStatement
+AboutSebastian
+TrainingExperience
+DumbbellScene
+TrainingCategorySelector
+GoalSelector
+Philosophy
+Packages
+Location
+BookingFlow
+FinalCTA
+Footer
+
+Separate:
+
+content/data
+UI
+animation logic
+3D scene
+configuration
+
+Do not create one enormous page component.
+
+==================================================
+33 — CONTENT CONFIGURATION
+==================================================
+
+Create a central configuration/data structure for:
+
+Sebastian's information
+training categories
+goal selector content
+packages
+prices
+location
+contact details
+WhatsApp
+social media
+booking information
+
+This allows everything to be edited later without rewriting components.
+
+==================================================
+34 — PERFORMANCE
+==================================================
+
+Performance is a priority.
+
+Target 90+ Lighthouse performance where realistically possible.
+
+Implement:
+
+- Next.js image optimization
+- responsive image sizes
+- AVIF/WebP
+- lazy loading
+- optimized fonts
+- dynamic imports
+- lazy-loaded 3D
+- compressed GLB
+- compressed textures
+- sensible DPR
+- minimal JS
+- minimal layout shifts
+
+Do NOT preload every image.
+
+Hero should load immediately.
+
+Below-the-fold content should load intelligently.
+
+==================================================
+35 — LOADING EXPERIENCE
+==================================================
+
+If loading is necessary, make it intentional.
+
+Potential loading screen:
+
+SC
+
+then a minimal percentage indicator.
+
+Example:
+
+SC
+
+34%
+
+Do NOT force visitors to watch a long loading animation.
+
+As soon as essential hero assets are available, enter the website.
+
+Load the 3D experience later in the background.
+
+==================================================
+36 — SEO
+==================================================
+
+Implement proper metadata.
+
+Example title structure:
+
+Sebastian Chenaux | Personal Trainer
+
+Create appropriate:
+
+- title
+- description
+- OpenGraph data
+- structured semantic content
+- favicon
+- social sharing image configuration
+
+Do not keyword-stuff.
+
+==================================================
+37 — VISUAL DETAILS FROM THE CONCEPT
+==================================================
+
+Closely preserve the visual language shown in the supplied concept.
+
+Important elements:
+
+- black cinematic environment
+- Sebastian's real photography
+- massive condensed headlines
+- SC monogram
+- white pill-shaped primary CTA
+- outlined secondary CTA
+- thin borders
+- small uppercase labels
+- tiny technical typography
+- numbered sections
+- editorial grids
+- asymmetric composition
+- large amounts of controlled negative space
+- subtle image grain
+- floating 3D dumbbell
+- small training navigation
+- goal selector
+- large quote section
+- strong photography transitions
+
+The result should NOT look like Bootstrap, Webflow template, Squarespace template or generic AI-generated website.
+
+==================================================
+38 — IMPORTANT UX RULE
+==================================================
+
+Every section must pass this test:
+
+"IF THE VISITOR DOESN'T READ THE PARAGRAPH,
+DO THEY STILL UNDERSTAND WHAT IS HAPPENING?"
+
+If the answer is NO:
+
+redesign the section.
+
+The website should communicate visually first.
+
+==================================================
+39 — 20 SECOND TEST
+==================================================
+
+Within approximately 20 seconds of browsing, a new visitor should understand:
+
+WHO?
+
+Sebastian Chenaux.
+
+WHAT?
+
+Personal Training.
+
+WHY HIM?
+
+Athletic background + professional EFZ fitness education + personal coaching.
+
+WHAT DOES HE TRAIN?
+
+Strength.
+Endurance.
+Functional fitness.
+Athletic performance.
+
+WHERE?
+
+MCS Training.
+
+HOW DO I START?
+
+Book/request a trial training.
+
+==================================================
+40 — DO NOT DO THIS
+==================================================
+
+DO NOT:
+
+- use generic stock fitness photos
+- create huge walls of text
+- create a generic gym template
+- use neon green everywhere
+- make every section a card
+- use random gradients
+- overuse glassmorphism
+- use excessive rounded cards
+- add unnecessary 3D objects
+- make the dumbbell constantly spin
+- sacrifice performance for animations
+- make mobile an afterthought
+- invent prices
+- invent addresses
+- invent contact information
+- falsely imply Sebastian owns MCS Training
+- use meaningless marketing buzzwords
+- stop after building a basic skeleton
+
+==================================================
+41 — FINAL EXPERIENCE
+==================================================
+
+The finished website should make someone think:
+
+"This guy takes his training seriously."
+
+but also:
+
+"I could actually see myself training with him."
+
+It should feel professional enough to justify paying for personal training while remaining personal and approachable.
+
+The signature visual memory should be:
+
+Sebastian's photography
++
+huge typography
++
+dark premium aesthetic
++
+scroll-controlled 3D dumbbell
++
+"DEIN NÄCHSTES LEVEL."
+
+==================================================
+42 — BUILD AND POLISH
+==================================================
+
+Do not stop after generating the first version.
+
+After implementation:
+
+1. Install dependencies.
+2. Run the development application.
+3. Fix all build errors.
+4. Fix all runtime errors.
+5. Test every interaction.
+6. Test the 3D scene.
+7. Test scroll direction reversal.
+8. Test navigation.
+9. Test goal selector.
+10. Test booking flow.
+11. Test desktop.
+12. Test tablet.
+13. Test mobile.
+14. Test Safari.
+15. Test Chrome.
+16. Check responsive typography.
+17. Check overflow.
+18. Check image cropping.
+19. Check WebGL fallback.
+20. Check reduced-motion behavior.
+21. Check keyboard accessibility.
+22. Check performance.
+23. Optimize unnecessary JavaScript.
+24. Optimize images.
+25. Improve animation timing.
+26. Remove unnecessary copy.
+27. Remove anything that looks generic.
+28. Polish spacing.
+29. Polish typography.
+30. Polish transitions.
+
+Do not tell me that something "could be added later" if you are capable of implementing it now.
+
+Make sensible design decisions independently.
+
+Build the complete working experience.
+
+==================================================
+43 — FINAL ART DIRECTION
+==================================================
+
+Use the supplied concept/mockup as the visual benchmark.
+
+Do NOT treat it as a rigid pixel-perfect requirement.
+
+Improve upon it where UX, responsiveness, animation or visual hierarchy benefits.
+
+The target feeling is:
+
+SEBASTIAN CHENAUX
+×
+PREMIUM SPORTS CAMPAIGN
+×
+SWISS EDITORIAL DESIGN
+×
+INTERACTIVE WEB EXPERIENCE
+
+Dark.
+Strong.
+Minimal.
+Cinematic.
+Interactive.
+Fast.
+
+The website should feel custom-built for Sebastian Chenaux — not like an AI generated a personal trainer template.
