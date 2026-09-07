@@ -8,7 +8,7 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import { ArrowUpRight, ArrowLeft, Check, X } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowLeft, Check, X } from "lucide-react";
 import { goals, frequencies, siteConfig } from "@/lib/config";
 import { validateContact, buildInquiryText, whatsappUrl } from "@/lib/inquiry";
 const BookingContext = createContext<{
@@ -230,7 +230,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                       className="button primary"
                       onClick={() => setStep(1)}
                     >
-                      Weiter <span>→</span>
+                      Weiter <ArrowRight size={17} aria-hidden="true" />
                     </button>
                   </div>
                 </>
@@ -263,7 +263,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                       disabled={!frequency}
                       onClick={() => setStep(2)}
                     >
-                      Weiter <span>→</span>
+                      Weiter <ArrowRight size={17} aria-hidden="true" />
                     </button>
                   </div>
                 </>
@@ -330,7 +330,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                     </button>
                     <button className="button primary" type="submit">
                       {preview ? "Anfrage prüfen" : "E-Mail vorbereiten"}{" "}
-                      <span>↗</span>
+                      <ArrowUpRight size={17} />
                     </button>
                   </div>
                 </form>
@@ -382,7 +382,13 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                   }
                 }}
               >
-                {copied ? "Kopiert ✓" : "Anfrage kopieren"}
+                {copied ? (
+                  <>
+                    Kopiert <Check size={17} aria-hidden="true" />
+                  </>
+                ) : (
+                  "Anfrage kopieren"
+                )}
               </button>
               {error && <p role="alert">{error}</p>}
               {whatsapp && (
@@ -392,7 +398,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Über WhatsApp anfragen <span>↗</span>
+                  Über WhatsApp anfragen <ArrowUpRight size={17} />
                 </a>
               )}
               <button

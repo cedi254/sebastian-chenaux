@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 export function IntroStatement() {
   return (
     <div className="intro-strip section-pad">
@@ -64,7 +65,7 @@ export function AboutSebastian() {
           </div>
         </div>
         <a href="#training" className="text-link">
-          Entdecke mein Training <span>↗</span>
+          Entdecke mein Training <ArrowUpRight size={18} />
         </a>
       </div>
     </section>

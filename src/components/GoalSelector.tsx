@@ -6,6 +6,7 @@ import {
   PersonStanding,
   Heart,
   ChartNoAxesColumnIncreasing,
+  ArrowUpRight,
 } from "lucide-react";
 import { goals } from "@/lib/config";
 import { useBooking } from "./BookingProvider";
@@ -50,7 +51,7 @@ export function GoalSelector() {
         <h3 key={goals[goal].title}>{goals[goal].title}</h3>
         <p key={goals[goal].id}>{goals[goal].copy}</p>
         <button className="button primary" onClick={() => openBooking()}>
-          Training starten <span>↗</span>
+          Training starten <ArrowUpRight size={17} />
         </button>
       </div>
     </section>

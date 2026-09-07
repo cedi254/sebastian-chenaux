@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 const links = [
   ["Sebastian", "#sebastian"],
   ["Training", "#training"],
@@ -58,7 +59,7 @@ export function Navbar() {
         className="button primary nav-cta"
         onClick={() => setOpen(false)}
       >
-        Probetraining <span>↗</span>
+        Probetraining <ArrowUpRight size={16} />
       </a>
       <button
         className="menu-toggle"

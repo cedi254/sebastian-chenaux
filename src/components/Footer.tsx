@@ -1,4 +1,5 @@
 "use client";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { useBooking } from "./BookingProvider";
 import { siteConfig } from "@/lib/config";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export function FinalCTA() {
       </h2>
       <p>Du musst nicht perfekt starten. Nur anfangen.</p>
       <button className="button primary" onClick={() => openBooking()}>
-        Probetraining starten <span>↗</span>
+        Probetraining starten <ArrowUpRight size={17} />
       </button>
     </section>
   );
@@ -48,7 +49,7 @@ export function Footer() {
           <span>Created with precision by</span>
           <strong className="youp-brand">
             <span className="youp-gradient">Youpscaling</span>
-            <span className="youp-arrow">↗</span>
+            <ArrowUpRight className="youp-arrow" size={11} />
           </strong>
         </a>
       </div>
@@ -59,10 +60,10 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram ↗
+            Instagram <ArrowUpRight size={14} />
           </a>
         )}
-        <a href="#top">Nach oben ↑</a>
+        <a href="#top">Nach oben <ArrowUp size={14} /></a>
       </div>
     </footer>
   );

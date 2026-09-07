@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
 export function Hero() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
@@ -26,10 +27,10 @@ export function Hero() {
         </p>
         <div className="hero-actions">
           <a className="button primary" href="#anfrage">
-            Probetraining starten <span>↗</span>
+            Probetraining starten <ArrowUpRight size={18} />
           </a>
           <a className="button outline" href="#training">
-            Training entdecken <span>↓</span>
+            Training entdecken <ArrowDown size={18} />
           </a>
         </div>
       </div>

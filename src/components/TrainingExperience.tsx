@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { Component, useEffect, useRef, useState, type ReactNode } from "react";
 import { trainingModes } from "@/lib/config";
 const Scene = dynamic(() => import("./DumbbellScene"), { ssr: false });
@@ -177,7 +178,7 @@ export function TrainingExperience() {
             <p className="training-tagline">{data.tagline}</p>
             <p className="body-copy">{data.copy}</p>
             <a className="text-link" href="#ziele">
-              Dein Ziel entdecken <span>↗</span>
+              Dein Ziel entdecken <ArrowUpRight size={18} />
             </a>
           </div>
         </div>

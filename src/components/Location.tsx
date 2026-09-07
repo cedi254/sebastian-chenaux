@@ -72,7 +72,7 @@ export function Location() {
         )}
         <div className="location-caption">
           <button onClick={() => setMap(!map)}>
-            {map ? "Foto anzeigen" : "Karte laden"} <span>↗</span>
+            {map ? "Foto anzeigen" : "Karte laden"} <ArrowUpRight size={16} />
           </button>
         </div>
       </div>

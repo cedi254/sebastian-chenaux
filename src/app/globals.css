@@ -132,12 +132,15 @@ h2 {
     transform 0.3s,
     border-color 0.25s;
 }
-.button span {
+.button span,
+.button svg {
   font-size: 19px;
   line-height: 1;
   transition: transform 0.25s;
+  flex: 0 0 auto;
 }
-.button:hover span {
+.button:hover span,
+.button:hover svg {
   transform: translate(3px, -2px);
 }
 .primary {
