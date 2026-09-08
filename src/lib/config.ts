@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Sebastian Chenaux",
   social: { image: "" },
-  contact: { email: "", whatsapp: "", instagram: "" },
-  booking: { preview: true },
+  contact: { email: "cedric@admyre.ch", whatsapp: "", instagram: "" },
+  booking: { preview: false },
   location: {
     name: "SC Training",
     website: "https://www.google.com/maps/search/?api=1&query=Riedtlistrasse+27+8006+Z%C3%BCrich",
@@ -78,26 +78,13 @@ export const goals = [
 ];
 export const packages = [
   {
-    name: "START",
-    label: "Einzeltraining",
-    price: "CHF XX",
-    unit: "/ Training",
-    description: "Dein Einstieg. Dein erster Schritt.",
-    features: [
-      "Persönliches 1:1 Training",
-      "Zielbesprechung",
-      "Individuelle Betreuung",
-    ],
-    recommended: false,
-  },
-  {
     name: "BUILD",
-    label: "5 Trainings",
-    price: "CHF XXX",
+    label: "10 Trainings",
+    price: "CHF 1’350",
     unit: "/ Paket",
-    description: "Dranbleiben. Eine Basis aufbauen.",
+    description: "Konsequent trainieren. Eine Basis aufbauen.",
     features: [
-      "5 persönliche Trainingseinheiten",
+      "10 persönliche Trainingseinheiten",
       "Individuelle Trainingsplanung",
       "Technik & Fortschrittskontrolle",
     ],
@@ -105,12 +92,12 @@ export const packages = [
   },
   {
     name: "LEVEL UP",
-    label: "10 Trainings",
-    price: "CHF XXX",
+    label: "20 Trainings",
     unit: "/ Paket",
-    description: "Konsequent trainieren. Weiterkommen.",
+    price: "CHF 2’850",
+    description: "Langfristig trainieren. Dein Level festigen.",
     features: [
-      "10 persönliche Trainingseinheiten",
+      "20 persönliche Trainingseinheiten",
       "Individuelle Trainingsplanung",
       "Regelmässige Standortbestimmung",
     ],

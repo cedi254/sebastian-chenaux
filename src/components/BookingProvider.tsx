@@ -31,7 +31,8 @@ export function BookingProvider({ children }: { children: ReactNode }) {
     [message, setMessage] = useState(""),
     [error, setError] = useState(""),
     [complete, setComplete] = useState(false),
-    [copied, setCopied] = useState(false);
+    [copied, setCopied] = useState(false),
+    [sending, setSending] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const priorFocus = useRef<HTMLElement | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -118,8 +119,8 @@ export function BookingProvider({ children }: { children: ReactNode }) {
     message,
   });
   const whatsapp = whatsappUrl(siteConfig.contact.whatsapp, inquiry);
-  const preview = siteConfig.booking.preview || !siteConfig.contact.email;
-  const submit = (e: React.FormEvent) => {
+  const preview = siteConfig.booking.preview;
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) {
       setError("Bitte gib deinen Namen ein.");
@@ -130,9 +131,40 @@ export function BookingProvider({ children }: { children: ReactNode }) {
       return;
     }
     setError("");
-    setComplete(true);
-    if (!preview)
-      window.location.href = `mailto:${siteConfig.contact.email}?subject=${encodeURIComponent("Trainingsanfrage — " + goals[goal].label)}&body=${encodeURIComponent(inquiry)}`;
+    if (preview) {
+      setComplete(true);
+      return;
+    }
+    setSending(true);
+    try {
+      const response = await fetch("/api/training-inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          contact,
+          goal: goals[goal].label,
+          frequency,
+          message,
+          packageName,
+        }),
+      });
+      if (!response.ok) {
+        const result = (await response.json().catch(() => null)) as {
+          error?: string;
+        } | null;
+        throw new Error(result?.error || "Senden fehlgeschlagen");
+      }
+      setComplete(true);
+    } catch (submissionError) {
+      setError(
+        submissionError instanceof Error
+          ? submissionError.message
+          : "Die Anfrage konnte gerade nicht gesendet werden.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
   return (
     <BookingContext.Provider value={{ goal, setGoal, openBooking }}>
@@ -318,7 +350,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                   <p className="form-note">
                     {preview
                       ? "Vorschau: Deine Angaben werden nicht gesendet oder gespeichert."
-                      : "Deine Anfrage wird in deinem E-Mail-Programm vorbereitet. Dort kannst du sie prüfen und senden."}
+                      : "Deine Anfrage wird direkt an Sebastian weitergeleitet."}
                   </p>
                   <div className="booking-controls">
                     <button
@@ -328,8 +360,12 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                     >
                       <ArrowLeft size={16} /> Zurück
                     </button>
-                    <button className="button primary" type="submit">
-                      {preview ? "Anfrage prüfen" : "E-Mail vorbereiten"}{" "}
+                    <button className="button primary" type="submit" disabled={sending}>
+                      {preview
+                        ? "Anfrage prüfen"
+                        : sending
+                          ? "Wird gesendet …"
+                          : "Anfrage senden"}{" "}
                       <ArrowUpRight size={17} />
                     </button>
                   </div>
@@ -344,12 +380,12 @@ export function BookingProvider({ children }: { children: ReactNode }) {
               <h2 id="booking-heading" ref={heading} tabIndex={-1}>
                 {preview
                   ? "DEIN PLAN.\nBEREIT ZUM START."
-                  : "DEINE ANFRAGE.\nBEREIT ZUM SENDEN."}
+                  : "DEINE ANFRAGE.\nIST ANGEKOMMEN."}
               </h2>
               <p>
                 {preview
                   ? "Dies ist eine Vorschau. Es wurde keine Anfrage gesendet."
-                  : "Sende die vorbereitete Anfrage in deinem E-Mail-Programm ab. Es wurde hier noch nichts versendet."}
+                  : "Deine Anfrage wurde erfolgreich weitergeleitet."}
               </p>
               <dl>
                 <div>

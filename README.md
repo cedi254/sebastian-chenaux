@@ -9,11 +9,11 @@ npm install
 npm run dev
 ```
 
-Production export: `npm run build` creates `out/`. Use any static HTTP host. Images are pre-optimised WebP with a responsive custom Next image loader; fonts are local. The GLB and 3D code load near the training section. Rendering happens on demand, not in a permanent animation loop.
+Production build: `npm run build` creates a Vercel-compatible Next.js deployment. Images are pre-optimised WebP with a responsive custom Next image loader; fonts are local. The GLB and 3D code load near the training section. Rendering happens on demand, not in a permanent animation loop.
 
 ## Edit content
 
-`src/lib/config.ts` contains packages, placeholder prices, goals, training modes, MCS locations and contact settings. Keep `booking.preview: true` while contact details are placeholders. To enable an actual email handoff, set `contact.email` and `booking.preview: false`. The visitor reviews and sends the prepared enquiry in their own email application; the website does not claim email delivery. A valid international WhatsApp number enables the optional WhatsApp handoff. No form data is stored or sent in preview mode.
+`src/lib/config.ts` contains packages, prices, goals, training modes, MCS locations and contact settings. Training enquiries are sent through `/api/training-inquiry` with Resend. Configure `RESEND_API_KEY`, `RESEND_FROM` and `TRAINING_INBOX` from `.env.example`; production values belong in Vercel Environment Variables, never in the repository. A valid international WhatsApp number enables the optional WhatsApp handoff.
 
 The two MCS addresses were checked against https://www.mcs-training.ch/ on 7 September 2026. They are MCS locations; Sebastian's exact meeting point is arranged personally. MCS is not presented as his business.
 
