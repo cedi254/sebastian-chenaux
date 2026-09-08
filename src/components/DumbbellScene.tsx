@@ -4,6 +4,10 @@ import { Environment, Lightformer, useGLTF } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { useRubberSurface, WeightMarks } from "./DumbbellSurface";
+import { DUMBBELL_MODEL_PATH } from "@/lib/dumbbell-loading";
+
+useGLTF.preload(DUMBBELL_MODEL_PATH);
+
 function Dumbbell({
   progress,
   reduced,
@@ -11,7 +15,7 @@ function Dumbbell({
   progress: React.RefObject<number>;
   reduced: boolean;
 }) {
-  const { scene: source } = useGLTF("/models/dumbbell.glb");
+  const { scene: source } = useGLTF(DUMBBELL_MODEL_PATH);
   const scene = useRubberSurface(source);
   const group = useRef<THREE.Group>(null);
   const { invalidate } = useThree();

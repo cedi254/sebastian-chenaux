@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Component, useEffect, useRef, useState, type ReactNode } from "react";
 import { trainingModes } from "@/lib/config";
+import { DUMBBELL_PRELOAD_ROOT_MARGIN } from "@/lib/dumbbell-loading";
 const Scene = dynamic(() => import("./DumbbellScene"), { ssr: false });
 class SceneBoundary extends Component<
   { children: ReactNode; fallback: ReactNode },
@@ -29,6 +30,9 @@ export function TrainingExperience() {
   const data = trainingModes[mode];
   // Browser capability detection is an external-system initialisation after hydration.
   useEffect(() => {
+    void import("./DumbbellScene");
+  }, []);
+  useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
     const update = () => setReduced(query.matches);
     update();
@@ -50,7 +54,7 @@ export function TrainingExperience() {
         }
         setActive(entry.isIntersecting);
       },
-      { rootMargin: "200px" },
+      { rootMargin: DUMBBELL_PRELOAD_ROOT_MARGIN },
     );
     if (root.current) observer.observe(root.current);
     return () => {

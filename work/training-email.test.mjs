@@ -3,9 +3,18 @@ import assert from "node:assert/strict";
 import { buildTrainingEmail } from "../src/lib/training-email.ts";
 import { buildBookingResultSummary } from "../src/lib/booking-result.ts";
 import { siteConfig } from "../src/lib/config.ts";
+import {
+  DUMBBELL_MODEL_PATH,
+  DUMBBELL_PRELOAD_ROOT_MARGIN,
+} from "../src/lib/dumbbell-loading.ts";
 
 test("uses Sebastian's dotted public email address", () => {
   assert.equal(siteConfig.contact.email, "sebastian.chenaux@icloud.com");
+});
+
+test("preloads the dumbbell before it reaches the viewport", () => {
+  assert.equal(DUMBBELL_MODEL_PATH, "/models/dumbbell.glb");
+  assert.equal(DUMBBELL_PRELOAD_ROOT_MARGIN, "100vh 0px");
 });
 
 test("builds a compact booking result summary", () => {
