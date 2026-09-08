@@ -1594,44 +1594,88 @@ address {
   font-size: 13px;
   margin-top: 16px;
 }
-.booking-result > p {
+.booking-result {
+  animation: result-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.result-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.result-heading h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 0.92;
+}
+.result-kicker {
+  color: #aaa;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+.result-message {
   font-size: 14px;
   color: #aaa;
+  margin: 22px 0 0;
 }
 .result-icon {
+  position: relative;
+  flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 55px;
-  height: 55px;
-  border: 1px solid #777;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #c8c8be;
   border-radius: 50%;
-  margin: 10px 0 30px;
+  color: #111;
+  background: #e4e4d9;
+  animation: result-icon-pop 0.55s 0.08s cubic-bezier(0.2, 1.4, 0.4, 1) both;
 }
-.booking-result dl {
-  margin: 25px 0;
-  border-top: 1px solid var(--line);
+.result-icon::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid #ffffff30;
+  border-radius: inherit;
+  animation: result-ring 0.8s 0.15s ease-out both;
 }
-.booking-result dl > div {
+.result-summary {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: 22px 0 0;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 12px 0;
+  color: #e5e5dc;
   font-size: 13px;
 }
-.booking-result dt {
-  color: #888;
-}
-.booking-result dd {
-  margin: 0;
-  text-align: right;
+.result-contact {
+  color: #aaa;
+  font-size: 12px;
+  margin: 12px 0 0;
   overflow-wrap: anywhere;
 }
-.booking-result > .button {
-  margin: 0 10px 15px 0;
+.result-contact span {
+  color: #777;
+  margin-right: 8px;
+}
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.result-actions > .button {
+  margin: 0;
 }
 .booking-result > .text-button {
   display: block;
+  margin-top: 17px;
+}
+.button-spinner {
+  animation: button-spin 0.8s linear infinite;
 }
 .booking-dialog[open] {
   animation: content-in 0.25s ease;
@@ -1644,6 +1688,49 @@ address {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes result-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes result-icon-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4) rotate(-16deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes result-ring {
+  from {
+    opacity: 0.8;
+    transform: scale(0.65);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .booking-result,
+  .result-icon,
+  .result-icon::after,
+  .button-spinner {
+    animation: none;
   }
 }
 @media (max-width: 1100px) {

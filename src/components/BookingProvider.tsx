@@ -8,9 +8,17 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import { ArrowUpRight, ArrowRight, ArrowLeft, Check, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  ArrowRight,
+  ArrowLeft,
+  Check,
+  LoaderCircle,
+  X,
+} from "lucide-react";
 import { goals, frequencies, siteConfig } from "@/lib/config";
 import { validateContact, buildInquiryText, whatsappUrl } from "@/lib/inquiry";
+import { buildBookingResultSummary } from "@/lib/booking-result";
 const BookingContext = createContext<{
   goal: number;
   setGoal: (value: number) => void;
@@ -360,13 +368,25 @@ export function BookingProvider({ children }: { children: ReactNode }) {
                     >
                       <ArrowLeft size={16} /> Zurück
                     </button>
-                    <button className="button primary" type="submit" disabled={sending}>
+                    <button
+                      className={`button primary ${sending ? "is-sending" : ""}`}
+                      type="submit"
+                      disabled={sending}
+                    >
                       {preview
                         ? "Anfrage prüfen"
                         : sending
-                          ? "Wird gesendet …"
+                          ? "Wird gesendet"
                           : "Anfrage senden"}{" "}
-                      <ArrowUpRight size={17} />
+                      {sending ? (
+                        <LoaderCircle
+                          className="button-spinner"
+                          size={17}
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <ArrowUpRight size={17} aria-hidden="true" />
+                      )}
                     </button>
                   </div>
                 </form>
@@ -374,69 +394,66 @@ export function BookingProvider({ children }: { children: ReactNode }) {
             </>
           ) : (
             <div className="booking-result">
-              <div className="result-icon">
-                <Check size={30} />
+              <div className="result-heading">
+                <div className="result-icon" aria-hidden="true">
+                  <Check size={27} />
+                </div>
+                <div>
+                  <p className="result-kicker">
+                    {preview ? "Vorschau" : "Anfrage eingegangen"}
+                  </p>
+                  <h2 id="booking-heading" ref={heading} tabIndex={-1}>
+                    {preview ? "BEREIT ZUM START." : "WIR MELDEN UNS."}
+                  </h2>
+                </div>
               </div>
-              <h2 id="booking-heading" ref={heading} tabIndex={-1}>
-                {preview
-                  ? "DEIN PLAN.\nBEREIT ZUM START."
-                  : "DEINE ANFRAGE.\nIST ANGEKOMMEN."}
-              </h2>
-              <p>
+              <p className="result-message">
                 {preview
                   ? "Dies ist eine Vorschau. Es wurde keine Anfrage gesendet."
                   : "Deine Anfrage wurde erfolgreich weitergeleitet."}
               </p>
-              <dl>
-                <div>
-                  <dt>Ziel</dt>
-                  <dd>{goals[goal].label}</dd>
-                </div>
-                <div>
-                  <dt>Rhythmus</dt>
-                  <dd>{frequency}</dd>
-                </div>
-                <div>
-                  <dt>Angebot</dt>
-                  <dd>{packageName}</dd>
-                </div>
-                <div>
-                  <dt>Kontakt</dt>
-                  <dd>
-                    {name} · {contact}
-                  </dd>
-                </div>
-              </dl>
-              <button
-                className="button outline"
-                onClick={async () => {
-                  try {
-                    await navigator.clipboard.writeText(inquiry);
-                    setCopied(true);
-                  } catch {
-                    setError("Kopieren ist in diesem Browser nicht verfügbar.");
-                  }
-                }}
-              >
-                {copied ? (
-                  <>
-                    Kopiert <Check size={17} aria-hidden="true" />
-                  </>
-                ) : (
-                  "Anfrage kopieren"
-                )}
-              </button>
-              {error && <p role="alert">{error}</p>}
-              {whatsapp && (
-                <a
-                  className="button primary"
-                  href={whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <p className="result-summary" aria-label="Anfragezusammenfassung">
+                {buildBookingResultSummary({
+                  goal: goals[goal].label,
+                  frequency,
+                  packageName,
+                })}
+              </p>
+              <p className="result-contact">
+                <span>Kontakt</span> {name} · {contact}
+              </p>
+              <div className="result-actions">
+                <button
+                  className="button outline"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(inquiry);
+                      setCopied(true);
+                    } catch {
+                      setError("Kopieren ist in diesem Browser nicht verfügbar.");
+                    }
+                  }}
                 >
-                  Über WhatsApp anfragen <ArrowUpRight size={17} />
-                </a>
-              )}
+                  {copied ? (
+                    <>
+                      Kopiert <Check size={17} aria-hidden="true" />
+                    </>
+                  ) : (
+                    "Anfrage kopieren"
+                  )}
+                </button>
+                {whatsapp && (
+                  <a
+                    className="button primary"
+                    href={whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Über WhatsApp anfragen <ArrowUpRight size={17} />
+                  </a>
+                )}
+              </div>
+              {error && <p role="alert">{error}</p>}
               <button
                 className="text-button"
                 onClick={() => {

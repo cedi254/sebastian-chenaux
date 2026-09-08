@@ -1,6 +1,18 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildTrainingEmail } from "../src/lib/training-email.ts";
+import { buildBookingResultSummary } from "../src/lib/booking-result.ts";
+
+test("builds a compact booking result summary", () => {
+  assert.equal(
+    buildBookingResultSummary({
+      goal: "Muskelaufbau",
+      frequency: "2× pro Woche",
+      packageName: "Probetraining",
+    }),
+    "Muskelaufbau · 2× pro Woche · Probetraining",
+  );
+});
 
 test("builds a training enquiry email with a reply address", () => {
   const email = buildTrainingEmail({
