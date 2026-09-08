@@ -2,6 +2,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildTrainingEmail } from "../src/lib/training-email.ts";
 import { buildBookingResultSummary } from "../src/lib/booking-result.ts";
+import { siteConfig } from "../src/lib/config.ts";
+
+test("uses Sebastian's dotted public email address", () => {
+  assert.equal(siteConfig.contact.email, "sebastian.chenaux@icloud.com");
+});
 
 test("builds a compact booking result summary", () => {
   assert.equal(

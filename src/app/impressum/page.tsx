@@ -21,7 +21,7 @@ export default function ImpressumPage() {
             Schweiz
           </p>
           <p>
-            E-Mail: sebastianchenaux@icloud.com<br />
+            E-Mail: sebastian.chenaux@icloud.com<br />
             Telefon: 078 340 24 44
           </p>
         </section>

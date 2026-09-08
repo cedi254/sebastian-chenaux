@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
           <p>
             Verantwortlich für die Bearbeitung von Personendaten ist Sebastian
             Chenaux, Stüssistrasse 96, 8057 Zürich, Schweiz. Fragen zum
-            Datenschutz bitte an sebastianchenaux@icloud.com richten.
+            Datenschutz bitte an sebastian.chenaux@icloud.com richten.
           </p>
         </section>
         <section>
@@ -35,11 +35,9 @@ export default function DatenschutzPage() {
         <section>
           <h2>E-Mail-Versand</h2>
           <p>
-            Für den direkten Versand von Formularanfragen wird – sobald
-            aktiviert – Resend als Auftragsbearbeiter eingesetzt. Dabei werden
-            die Formulardaten zur Zustellung an den angegebenen Empfänger
-            verarbeitet. Die konkrete Datenübermittlung wird vor der Aktivierung
-            des Versands geprüft und in dieser Erklärung ergänzt.
+            Für den direkten Versand von Formularanfragen wird Resend als
+            Auftragsbearbeiter eingesetzt. Dabei werden die Formulardaten zur
+            Zustellung an Sebastian Chenaux per E-Mail verarbeitet.
           </p>
         </section>
         <section>
@@ -55,7 +53,7 @@ export default function DatenschutzPage() {
           <p>
             Du kannst im Rahmen des Schweizer Datenschutzgesetzes Auskunft,
             Berichtigung oder Löschung deiner Personendaten verlangen. Wende
-            dich dafür an sebastianchenaux@icloud.com.
+            dich dafür an sebastian.chenaux@icloud.com.
           </p>
         </section>
       </div>

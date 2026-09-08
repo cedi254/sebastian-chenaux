@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Sebastian Chenaux",
   social: { image: "" },
-  contact: { email: "sebastianchenaux@icloud.com", whatsapp: "", instagram: "" },
+  contact: { email: "sebastian.chenaux@icloud.com", whatsapp: "", instagram: "" },
   booking: { preview: false },
   location: {
     name: "SC Training",
