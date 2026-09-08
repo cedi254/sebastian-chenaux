@@ -59,7 +59,7 @@ export function Packages() {
         ))}
       </div>
       <p className="price-note">
-        Individuelle Angebote und Einheiten auf Anfrage.
+        Alle Pakete beinhalten persönliches 1:1 Training.
       </p>
     </section>
   );

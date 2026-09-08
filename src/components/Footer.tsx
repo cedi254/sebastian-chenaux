@@ -63,6 +63,8 @@ export function Footer() {
             Instagram <ArrowUpRight size={14} />
           </a>
         )}
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
         <a href="#top">Nach oben <ArrowUp size={14} /></a>
       </div>
     </footer>

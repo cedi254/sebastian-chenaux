@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Sebastian Chenaux",
   social: { image: "" },
-  contact: { email: "cedric@admyre.ch", whatsapp: "", instagram: "" },
+  contact: { email: "sebastianchenaux@icloud.com", whatsapp: "", instagram: "" },
   booking: { preview: false },
   location: {
     name: "SC Training",
