@@ -14,7 +14,7 @@ test("uses Sebastian's dotted public email address", () => {
 
 test("preloads the dumbbell before it reaches the viewport", () => {
   assert.equal(DUMBBELL_MODEL_PATH, "/models/dumbbell.glb");
-  assert.equal(DUMBBELL_PRELOAD_ROOT_MARGIN, "100vh 0px");
+  assert.equal(DUMBBELL_PRELOAD_ROOT_MARGIN, "100% 0px");
 });
 
 test("builds a compact booking result summary", () => {
