@@ -94,7 +94,7 @@ export const packages = [
     name: "LEVEL UP",
     label: "20 Trainings",
     unit: "/ Paket",
-    price: "CHF 2’850",
+    price: "CHF 2’700",
     description: "Langfristig trainieren. Dein Level festigen.",
     features: [
       "20 persönliche Trainingseinheiten",
